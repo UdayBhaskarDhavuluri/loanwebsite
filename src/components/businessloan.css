@@ -1,0 +1,412 @@
+/* BusinessLoan.css */
+
+/* Container Styles */
+.container {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+/* Flex container for content */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+/* First Part: Business Loan Info */
+.loan-info {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loan-info h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.loan-info p {
+  font-size: 18px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.loan-info p:last-of-type {
+  font-size: 16px;
+}
+
+/* Second Part: Need More Details Form */
+.form-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-container input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-container button {
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+/* Terms and Conditions */
+.terms-label {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.terms-label a {
+  color: #1d72b8;
+  text-decoration: none;
+}
+
+.terms-checkbox {
+  margin-left: 5px;
+}
+
+/* Apply Now Container */
+.apply-container {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.apply-container h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.apply-container button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-container button:hover {
+  background-color: #45a049;
+}
+/* Features and Benefits Container */
+.features-container {
+  margin-top: 60px; /* More spacing to separate it from other sections */
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.features-container h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Grid for Features and Benefits Boxes */
+.features-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 boxes per row */
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.feature-box {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px); }
+  /* Eligibility Criteria Box Styling */
+.eligibility-container, .documents-container {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.eligibility-container h2, .documents-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.eligibility-boxes, .documents-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.eligibility-box, .documents-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.eligibility-box:hover, .documents-box:hover {
+  transform: scale(1.05);
+}
+
+.eligibility-box .icon, .documents-box .icon {
+  font-size: 40px;
+  color: #4CAF50;
+}
+
+.eligibility-box h4, .documents-box h4 {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.eligibility-box p, .documents-box p {
+  font-size: 14px;
+  color: #777;
+}
+/* Application Requirements Section Styling */
+.application-requirements-container {
+  padding: 30px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application-requirements-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+}
+
+.application-requirements-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.application-requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 45%;  /* Adjust the width of the list to take half of the container */
+}
+
+.application-requirements-list li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.application-requirements-list li .dot {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+}
+
+.application-requirements-list li:hover {
+  color: #4CAF50;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.application-requirements-container .application-requirements-list li span {
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+/* How to Apply Section Styling */
+.how-to-apply-container {
+  padding: 40px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.how-to-apply-container h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.how-to-apply-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.mobile-screen {
+  width: 40%;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.mobile-screen::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 95%;
+  background: url('https://ik.imagekit.io/krazybee/kreditbee_in/banners/New_Web/Inner_Pages/Generic/images_PhoneMockup-iOS.png') no-repeat center center;
+  background-size: contain;
+}
+
+.mobile-screen-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 30px;
+  font-size: 18px;
+  color: #555;
+  text-align: left;
+}
+
+.mobile-step {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.steps-list {
+  width: 50%;
+}
+
+.steps-list ol {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+.steps-list li {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #fff;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.steps-list li:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .how-to-apply-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-screen {
+    width: 100%;
+  }
+
+  .steps-list {
+    width: 100%;
+  }
+}
+
+/* Container Style */
+.appStorePlayStoreContainer {
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Text Style */
+.appText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Logos Container */
+.logosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Button Style */
+.buttonStyle {
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: white;
+  background-color: #008CBA;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonStyle:hover {
+  background-color: #4CAF50; /* Hover effect */
+}
+
+
+
+
+

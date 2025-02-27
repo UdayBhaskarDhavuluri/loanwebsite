@@ -1,0 +1,62 @@
+/* Container for Security Center */
+.securityCenterContainer {
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .sectionHeading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Container for All Security Boxes */
+  .securityBoxesContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* Individual Box Styling */
+  .securityBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .securityBox:hover {
+    background-color: #f0f8ff;
+  }
+  
+  /* Heading inside each box */
+  .boxHeading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 1.5rem;
+  }
+  
+  /* Box Content hidden by default */
+  .boxContent {
+    display: none;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Show content when active */
+  .boxContent.show {
+    display: block;
+  }
+  

@@ -1,0 +1,238 @@
+/* Footer container */
+.footer {
+  background-color: #282c34;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+/* Footer links container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+  justify-content: space-between;
+}
+
+/* Styling for the footer links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Legal Section Styling */
+.legal-section,
+.services-section,
+.company-section,
+.justtap-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.legal-heading,
+.services-heading,
+.company-heading,
+.justtap-heading {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.legal-links,
+.services-links,
+.company-links,
+.justtap-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legal-links li,
+.services-links li,
+.company-links li,
+.justtap-links li {
+  margin: 8px 0;
+}
+
+.legal-links a,
+.services-links a,
+.company-links a,
+.justtap-links a {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.legal-links a:hover,
+.services-links a:hover,
+.company-links a:hover,
+.justtap-links a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Ensure icons are centered */
+  gap: 20px; /* Space between the icons */
+}
+
+.social-icons a {
+  color: #61dafb;
+  font-size: 24px;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* App Download Buttons */
+.app-download-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Ensure buttons are centered */
+  gap: 20px; /* Space between the buttons */
+}
+
+.app-download-buttons a {
+  display: inline-block;
+}
+
+.app-download-buttons img {
+  width: 160px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.app-download-buttons img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design for Smaller Screens */
+
+/* For smaller tablets and below */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+  }
+
+  .footer-links,
+  .legal-section,
+  .services-section,
+  .company-section,
+  .justtap-section {
+    align-items: center;
+  }
+
+  .footer-links li,
+  .legal-links li,
+  .services-links li,
+  .company-links li,
+  .justtap-links li {
+    margin: 8px 0;
+  }
+
+  .app-download-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Reduce space between buttons */
+  }
+
+  .social-icons {
+    flex-direction: column; /* Stack icons vertically */
+    gap: 10px;
+  }
+}
+
+/* For smaller mobile screens */
+@media (max-width: 480px) {
+  .footer-links a,
+  .legal-links a,
+  .services-links a,
+  .company-links a,
+  .justtap-links a {
+    font-size: 12px; /* Slightly smaller font size for mobile */
+  }
+
+  .footer-container {
+    padding: 0 10px; /* Reduce padding on mobile */
+  }
+
+  .social-icons a {
+    font-size: 20px; /* Smaller icon size for mobile */
+  }
+
+  
+}
+/* App Download Images */
+.app-download-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px; /* Add some space between the images */
+  margin-top: 20px; /* Space above the images */
+}
+
+.social-top-icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px; /* Add some space between the images */
+  margin-top: 10px; /* Space above the images */
+
+}
+
+.google-play-image,
+.app-store-image {
+  width: 150px; /* Adjust the size of the images */
+  height: auto;
+  cursor: pointer; /* Make images clickable */
+  transition: transform 0.3s ease-in-out; /* Add some hover effect */
+}
+
+
+
+.google-play-image:hover,
+.app-store-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* For smaller tablets and below */
+@media (max-width: 768px) {
+  .app-download-images {
+    flex-direction: column; /* Stack the images vertically */
+    gap: 15px; /* Adjust space between the images */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .google-play-image,
+  .app-store-image {
+    width: 120px; /* Adjust image size on mobile */
+  }
+}

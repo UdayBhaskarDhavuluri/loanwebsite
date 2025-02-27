@@ -1,0 +1,125 @@
+/* General styling for the loan form container */
+.loan-form-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background: #000; /* Gradient background */
+    min-height: 100vh;
+    gap: 20px; /* Add this line to create space between the containers */
+}
+
+.left-container {
+    width: 65%; /* Larger left part */
+    padding: 30px;
+    margin-right: 20px; /* Add margin to the right */
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 15px;
+}
+
+  
+  .right-container {
+    width: 30; /* Smaller right part */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Styling for the feature boxes */
+  .features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .feature-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-box .icon {
+    font-size: 30px;
+    color: skyblue;
+    margin-bottom: 10px;
+  }
+  
+  .feature-box h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Styling for the right side form */
+  .mobile-input {
+    margin-bottom: 20px;
+  }
+  
+  #mobile {
+    width: 300;
+    padding: 12;
+    margin-top: 8px;
+    margin-left: 20;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  input[type="checkbox"] {
+    margin: 10; 
+    padding: 10;
+    width: auto; 
+  }
+  .terms-checkbox { 
+   
+    margin-bottom: 20;
+  }
+  
+  .terms-checkbox label {
+    font-size: 14;
+    color: #666;
+   
+  }
+  
+  .terms-checkbox a {
+    color: skyblue;
+    text-decoration: underline;
+    cursor: pointer;
+   
+  }
+  
+  
+  .otp-button {
+    margin-top: 40px;
+    width: 100%;
+    padding: 14px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: not-allowed; /* Initially disabled */
+    transition: background-color 0.3s ease;
+  }
+  
+  .otp-button.active {
+    cursor: pointer;
+    background-color: skyblue; /* Button becomes active with a new color */
+  }
+  
+  .otp-button:disabled {
+    background-color: #ddd;
+  }
+  
+  .otp-button:hover:enabled {
+    background-color: #ff5f3f; /* Hover effect */
+  }
+  
