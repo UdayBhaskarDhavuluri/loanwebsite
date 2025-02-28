@@ -19,8 +19,8 @@ import FlexiPersonal from './components/flexipersonal';
 import CorporateSocialResponsibilityPolicy from './components/csrp';
 import ResponsibleLending from './components/responsible';
 import InstantPersonal from './components/instantpersonal';
-import PersonalCustomers from './components/personalcustomers';
-import PersonalDrivers from './components/personaldrivers';
+import PersonalCustomers from './components/personalcustomer';
+import PersonalDrivers from './components/personaldriver';
 import SecurityCentre from './components/securitycentre';
 
 

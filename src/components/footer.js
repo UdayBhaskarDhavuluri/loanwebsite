@@ -25,8 +25,8 @@ const Footer = () => {
           <h3 className="services-heading">Services</h3>
           <ul className="services-links">
             <li><a href="/flexi-personal-loan">Flexi Personal Loan</a></li>
-            <li><a href="/personal-loan-for-drivers">Personal Loan for Drivers</a></li>
             <li><a href="/personal-loan-for-customers">Personal Loan for Customers</a></li>
+            <li><a href="/personal-loan-for-drivers">Personal Loan for Drivers</a></li>
             <li><a href="/business-loan">Business Loan</a></li>
           </ul>
         </div>
