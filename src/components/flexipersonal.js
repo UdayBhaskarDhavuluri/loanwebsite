@@ -1,14 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './flexipersonal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard, faCheckCircle, faUser, faTools, faMoneyBillWave, faChartLine, faClock, faShieldAlt, faFileInvoice, faArrowAltCircleRight, faPlane, faGraduationCap, faShoppingCart, faHeartbeat, faRing, faBaby, faGamepad, faGift, faHome, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft, FaArrowRight, FaQuoteLeft } from "react-icons/fa";
 
 const FlexiPersonal = () => {
   const navigate = useNavigate();
 
   const handleCheckEligibility = () => {
     navigate('/login');
+  };
+
+  const feedbackData = [
+    { name: "Rahul Sharma", feedback: "Amazing loan service! The process was seamless and hassle-free." },
+    { name: "Priya Verma", feedback: "Quick approval and low interest rates. Highly recommended!" },
+    { name: "Amit Kapoor", feedback: "Best loan experience ever! Customer support was very helpful." },
+    { name: "Neha Singh", feedback: "Fast processing and easy documentation. Got my loan in minutes!" },
+    { name: "Vikram Patil", feedback: "User-friendly platform with excellent service!" },
+    { name: "Sanya Mehta", feedback: "Very convenient loan application process. No hidden charges!" },
+    { name: "Rohan Das", feedback: "Efficient and trustworthy. The best loan provider in India." },
+    { name: "Kavita Joshi", feedback: "Smooth process and transparent policies. Highly satisfied!" },
+    { name: "Raj Malhotra", feedback: "Great experience! The loan was approved instantly." },
+    { name: "Meena Iyer", feedback: "Easy repayment options and great customer support." }
+  ];
+
+  const [startIndex, setStartIndex] = useState(0);
+  const itemsPerPage = 3;
+
+  const handleNext = () => {
+    if (startIndex + itemsPerPage < feedbackData.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
   };
 
   return (
@@ -149,25 +178,48 @@ const FlexiPersonal = () => {
           <p>Home Renovation</p>
         </div>
       </div>
+
       <p className="flexi-conclusion">
         A <span className="highlight-text">Flexi Personal Loan</span> offers an excellent financial solution for those seeking a flexible and accessible way to borrow money. Whether you need funds for a personal emergency, home improvement, or a wedding, the Flexi loan provides ease of access, lower interest charges, and the ability to repay based on your financial capacity. The revolving credit nature and flexibility in repayment make it an ideal choice for borrowers who need financial freedom without being locked into rigid structures. With minimal documentation and fast disbursement, this loan option provides an all-around favorable solution for managing short-term financial requirements.
       </p>
-      <div className="apply-container">
+      <div className="feedback-container">
+      <h2>Customers Feedback</h2>
+      <div className="feedback-wrapper">
+        <button className="arrow-btn left" onClick={handlePrev} disabled={startIndex === 0}>
+          <FaArrowLeft />
+        </button>
+        
+        <div className="feedback-boxes">
+          {feedbackData.slice(startIndex, startIndex + itemsPerPage).map((feedback, index) => (
+            <div key={index} className="feedback-box">
+              <FaQuoteLeft className="quote-icon" />
+              <p className="feedback-text">"{feedback.feedback}"</p>
+              <h4 className="customer-name">- {feedback.name}</h4>
+            </div>
+          ))}
+        </div>
+
+        <button className="arrow-btn right" onClick={handleNext} disabled={startIndex + itemsPerPage >= feedbackData.length}>
+          <FaArrowRight />
+        </button>
+      </div>
+    </div>
+      <div className="flexi-container">
         <h2 className="sub-heading">How to Apply for a Flexi Personal Loan Online at JustTap?</h2>
         <div className="apply-content">
-          <div className="apply-image">
+          {/* <div className="apply-image">
             <img src="/images/apply-now.jpg" alt="Apply Now" />
-          </div>
-          <div className="apply-steps">
+          </div> */}
+          <div  className="apply-steps">
             <ol>
-              <li>Sign up using mobile number.</li>
-              <li>Enter basic information & check eligibility.</li>
-              <li>Verify your profile by uploading KYC documents.</li>
-              <li>Provide bank account details.</li>
-              <li>Choose your loan amount and tenure.</li>
-              <li>Get loan disbursed directly into your bank account.</li>
+              <li> 1.Sign up using mobile number.</li>
+              <li> 2.Enter basic information & check eligibility.</li>
+              <li> 3.Verify your profile by uploading KYC documents.</li>
+              <li> 4.Provide bank account details.</li>
+              <li> 5.Choose your loan amount and tenure.</li>
+              <li> 6.Get loan disbursed directly into your bank account.</li>
             </ol>
-            <button
+            <button style={{backgroundColor:'skyblue',width:'25%',marginTop:10}}
               className="eligibility-button"
               onClick={handleCheckEligibility}
             >

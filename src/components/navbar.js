@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Importing useNavigate from react-router-dom
-import './navbar.css'; // Importing the CSS file for styling
+import { Link, useNavigate } from 'react-router-dom';
+import './navbar.css'; // Import CSS file
+import logo from '../loan_images/mainlogo.jpg'
 
 const Navbar = () => {
   const navigate = useNavigate(); // Initialize the useNavigate hook
@@ -11,6 +12,14 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      {/* Logo Section */}
+      <div className="logo-container">
+        <Link to="/">
+          <img src={logo} alt="Company Logo" className="logo" />
+        </Link>
+      </div>
+
+      {/* Navbar Items */}
       <ul className="navbar-list">
         <li className="navbar-item">
           <Link to="/" className="navbar-link">Home</Link>

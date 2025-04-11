@@ -143,7 +143,126 @@ const FAQ = () => {
             </p>
           )}
         </div>
+         {/* Question 6 */}
+      <div
+          onClick={() => toggleAnswer(6)}
+          style={{
+            marginBottom: '20px',
+            padding: '20px',
+            backgroundColor: '#fff',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <h3 style={{ fontSize: '20px', color: '#333' }}>How can I get  a business loan on JustTap?</h3>
+            <span style={{ fontSize: '18px', color: '#333' }}>{openQuestion === 6 ? '▲' : '▼'}</span>
+          </div>
+          {openQuestion === 6 && (
+            <p style={{ fontSize: '16px', color: '#555', marginTop: '10px' }}>
+              You can get the business loan on the JustTap app or website by checking the business loan page.
+            </p>
+          )}
+        </div>
+
+        {/* Question 7 */}
+      <div
+          onClick={() => toggleAnswer(7)}
+          style={{
+            marginBottom: '20px',
+            padding: '20px',
+            backgroundColor: '#fff',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <h3 style={{ fontSize: '20px', color: '#333' }}>How can I get  a Instant personal loan on JustTap?</h3>
+            <span style={{ fontSize: '18px', color: '#333' }}>{openQuestion === 7 ? '▲' : '▼'}</span>
+          </div>
+          {openQuestion === 7 && (
+            <p style={{ fontSize: '16px', color: '#555', marginTop: '10px' }}>
+              You can get the InstantPersonal loan on the JustTap app or website by checking the InstantPersonal loan page.
+            </p>
+          )}
+        </div>
+
+         {/* Question 8 */}
+      <div
+          onClick={() => toggleAnswer(8)}
+          style={{
+            marginBottom: '20px',
+            padding: '20px',
+            backgroundColor: '#fff',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <h3 style={{ fontSize: '20px', color: '#333' }}>How can I know  about Flexi personal loan on JustTap?</h3>
+            <span style={{ fontSize: '18px', color: '#333' }}>{openQuestion === 8 ? '▲' : '▼'}</span>
+          </div>
+          {openQuestion === 8 && (
+            <p style={{ fontSize: '16px', color: '#555', marginTop: '10px' }}>
+              You can get the Flexi personal loan information on the JustTap app or website by checking the Flexi personal loan page.
+            </p>
+          )}
+        </div>
+
+        {/* Question 9 */}
+      <div
+          onClick={() => toggleAnswer(9)}
+          style={{
+            marginBottom: '20px',
+            padding: '20px',
+            backgroundColor: '#fff',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <h3 style={{ fontSize: '20px', color: '#333' }}>How to check  whether I am eligible for personal loan on JustTap?</h3>
+            <span style={{ fontSize: '18px', color: '#333' }}>{openQuestion === 9 ? '▲' : '▼'}</span>
+          </div>
+          {openQuestion === 9 && (
+            <p style={{ fontSize: '16px', color: '#555', marginTop: '10px' }}>
+               Go to eligibility criteria in respective field,there You can get the  personal loan information for drivers as well as customers on the JustTap app or website by checking the both  personal loan pages.
+            </p>
+          )}
+        </div>
+
+        {/* Question 10 */}
+      <div
+          onClick={() => toggleAnswer(10)}
+          style={{
+            marginBottom: '20px',
+            padding: '20px',
+            backgroundColor: '#fff',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <h3 style={{ fontSize: '20px', color: '#333' }}>How to Sign In to get the  personal loan as driver  on JustTap?</h3>
+            <span style={{ fontSize: '18px', color: '#333' }}>{openQuestion === 10 ? '▲' : '▼'}</span>
+          </div>
+          {openQuestion === 10 && (
+            <p style={{ fontSize: '16px', color: '#555', marginTop: '10px' }}>
+               Go to personal loan for driver page ,there You can get the step by step Sign up details for drivers on the JustTap app or website .
+            </p>
+          )}
+        </div>
+      
+      
+      
       </div>
+
+     
 
       {/* Stylish Button Container */}
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
@@ -159,9 +278,10 @@ const FAQ = () => {
             cursor: 'pointer',
             boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
             transition: 'background-color 0.3s',
+            width:'200px'
           }}
         >
-          Go to JustTap App
+          Go to JustTap 
         </button>
       </div>
     </div>

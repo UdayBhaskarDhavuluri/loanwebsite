@@ -4,6 +4,7 @@ import React from 'react';
 const containerStyle = {
   padding: '30px',
   fontFamily: 'Arial, sans-serif',
+  
   // Prevents the image from repeating
 };
 

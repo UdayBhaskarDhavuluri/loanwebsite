@@ -23,6 +23,7 @@ const subHeadingStyle = {
   fontSize: '20px',
   fontWeight: 'bold',
   marginBottom: '10px',
+  color:'white'
 };
 
 const paragraphStyle = {
@@ -41,6 +42,7 @@ const buttonStyle = {
   border: 'none',
   borderRadius: '5px',
   marginTop: '20px',
+  width:'250px'
 };
 
 const privacycontainer = {

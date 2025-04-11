@@ -1,7 +1,84 @@
 import React from 'react';
+import  "./aboutus.css";
 import { FaRegCheckCircle, FaDollarSign, FaClock, FaUsers, FaCreditCard, FaHeadset, FaHandHoldingUsd, FaPaperPlane } from 'react-icons/fa';
+import { FaChartLine, FaBriefcaseMedical, FaMapMarkerAlt,  FaLightbulb, FaPuzzlePiece } from "react-icons/fa";
 import someImage from '../loan_images/liked4.jpg'; // Ensure the path to your image is correct
 import personImage from '../loan_images/liked7.jpg'; // Make sure to replace with the correct path to your person image
+
+const buttonStyle = {
+  backgroundColor: '#4CAF50',
+  color: 'white',
+  fontSize: '1.2rem',
+  padding: '12px 30px',
+  border: 'none',
+  borderRadius: '4px',
+  cursor: 'pointer',
+  display: 'block',
+  margin: '20px auto',
+  transition: 'background-color 0.3s ease',
+};
+
+const buttonHoverStyle = {
+  backgroundColor: '#45a049',
+};
+const appStorePlayStoreContainerStyle = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  backgroundColor: 'black',
+  padding: '20px',
+  borderRadius: '8px',
+  marginTop: '40px',
+  width: '97%',
+  // Adjust the height for a small height container
+};
+
+const appTextStyle = {
+  fontSize: '1.5rem',
+  color: '#fff',
+  flex: 1,
+  textAlign: 'center',
+};
+
+const logosContainerStyle = {
+  display: 'flex',
+  gap: '20px',
+  alignItems: 'center',
+};
+
+const perks = [
+  {
+    icon: <FaChartLine className="perk-icon" />,
+    title: "Quick Growth",
+    description: "At JustTap, we believe in fast career progression. Perform well, and watch your career soar!"
+  },
+  {
+    icon: <FaBriefcaseMedical className="perk-icon" />,
+    title: "Medical Insurance",
+    description: "We provide comprehensive health coverage to ensure your well-being and peace of mind."
+  },
+  {
+    icon: <FaMapMarkerAlt className="perk-icon" />,
+    title: "Central Location",
+    description: "Our office is located in the heart of the city, making commuting easy and convenient."
+  },
+  {
+    icon: <FaUsers className="perk-icon" />,
+    title: "Team Events",
+    description: "We host frequent team outings and activities to keep the work environment fun and engaging."
+  },
+  {
+    icon: <FaLightbulb className="perk-icon" />,
+    title: "Understanding Startup Culture",
+    description: "Work in a dynamic environment where innovation, agility, and learning are at the core."
+  },
+  {
+    icon: <FaPuzzlePiece className="perk-icon" />,
+    title: "Constructive Challenges",
+    description: "We encourage creative problem-solving and tackling challenges that push your limits."
+  }
+];
+
 
 const AboutUs = () => {
   return (
@@ -209,6 +286,56 @@ const AboutUs = () => {
             <h3 style={{ fontSize: '24px', color: '#333', marginTop: '20px' }}>Fast Process</h3>
             <p style={{ fontSize: '16px', color: '#555' }}>Get the money you need within minutes.</p>
           </div>
+        </div>
+      </div>
+      <div className="careers-container">
+      <h2>Careers</h2>
+      <p>
+        JustTap is a Personal Loan platform offering Flexi Personal Loans,
+        Personal Loans for Drivers and Customers, and Purchase on EMI up to ₹10
+        Lakhs to young professionals. It is our constant endeavor to become
+        their first choice for quick, convenient, and hassle-free Personal
+        Loans.
+      
+      
+        We’re looking for hardworking and passionate people who are open to
+        learning and taking up new challenges during their journey with us,
+        which will ultimately help us achieve our goal.
+      
+      
+        If you’re someone who is looking for exciting learning opportunities,
+        love coming up with better ways of doing something, hate run-of-the-mill
+        or mundane assignments, then you’ll surely enjoy working with us.
+        </p>
+      
+      <h3>Excited? Check out our open positions below!</h3>
+    </div>
+    <div className="perks-container">
+      <h2>Perks and Benefits</h2>
+      <div className="perks-grid">
+        {perks.map((perk, index) => (
+          <div key={index} className="perk-card">
+            {perk.icon}
+            <h3>{perk.title}</h3>
+            <p>{perk.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+     {/* Achieve More Section */}
+     <div style={appStorePlayStoreContainerStyle}>
+        <div style={appTextStyle}>
+          Achieve more, worry less. Start your loan journey today with JustTap
+        </div>
+        <div style={logosContainerStyle}>
+          <button
+            style={{...buttonStyle, margin: '0'}}
+            onClick={() => window.location.href = '/loanapppage'}
+            onMouseOver={(e) => (e.target.style.backgroundColor = buttonHoverStyle.backgroundColor)}
+            onMouseOut={(e) => (e.target.style.backgroundColor = buttonStyle.backgroundColor)}
+          >
+            Apply Now
+          </button>
         </div>
       </div>
     </div>

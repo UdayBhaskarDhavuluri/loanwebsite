@@ -1,0 +1,84 @@
+.feedback-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .feedback-boxes {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .feedback-box {
+    width: 300px;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .feedback-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .quote-icon {
+    font-size: 30px;
+    color: #ff6b6b;
+  }
+  
+  .feedback-text {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .customer-name {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .arrow-btn {
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  
+  .arrow-btn:hover {
+    background-color: #ff4c4c;
+  }
+  
+  .arrow-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .left {
+    margin-right: 10px;
+  }
+  
+  .right {
+    margin-left: 10px;
+  }
+  

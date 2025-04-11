@@ -6,7 +6,10 @@
   background-color: skyblue;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* background: url('https://th.bing.com/th/id/OIP.jJGhmFAINes9QBzFh3YnKAHaEG?w=326&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7') no-repeat center center/cover; */
+  
 }
+
 
 h2 {
   text-align: center;
@@ -146,3 +149,184 @@ p {
 .locate-us-btn:hover {
   background-color: #45a049;
 }
+
+/* Background styling */
+.contact-form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+/* Stylish Background Image */
+.contact-form-container body {
+  background: url("https://source.unsplash.com/1600x900/?nature,water") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Elements */
+.contact-form-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-group textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: blue;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #45a049;
+}
+/* Main container styling */
+.contact-section {
+  display: flex;
+  max-width: 1300px;
+  margin: 50px auto;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Left Side - Contact Details */
+.contact-details {
+  flex: 1;
+  padding: 30px;
+  background: #f8f9fa;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #333;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-item .icon {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.social-icon.facebook {
+  background: #3b5998;
+}
+
+.social-icon.twitter {
+  background: #00acee;
+}
+
+.social-icon.instagram {
+  background: #e1306c;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+/* Customer Service Info */
+.customer-service {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Right Side - Image Section */
+.contact-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents image overflow */
+}
+
+.contact-image img {
+  width: 100%;  /* Make the image take full width of the container */
+  height: 100%; /* Make the image take full height of the container */
+  object-fit: cover; /* Ensures the image scales properly without distortion */
+  border-radius: 0 10px 10px 0; /* Optional: Adds rounded corners on the right side */
+}
+

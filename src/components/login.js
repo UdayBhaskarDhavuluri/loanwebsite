@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h2>Sign In</h2>
+        <h2 style={{color:'#fff'}}>Sign In</h2>
         <form>
           <div className="input-container">
             <input type="email or number" placeholder="Email or phone number" />

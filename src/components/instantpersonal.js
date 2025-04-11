@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import googlePlayImg from '../loan_images/googleplay.jpg';  // Assuming the image path is correct
 import appStoreImg from '../loan_images/app.jpg';  // Assuming the image path is c
+import { FaArrowLeft, FaArrowRight, FaQuoteLeft } from "react-icons/fa";
+import "./instantpersonal.css"; // Create this CSS file for styling
 
 // Inline Styles for Components
 const InstantPersonal = () => {
@@ -164,6 +166,32 @@ const InstantPersonal = () => {
     height: 'auto',
     cursor: 'pointer',
   };
+  const feedbackData = [
+    { name: "Rahul Sharma", feedback: "Amazing loan service! The process was seamless and hassle-free." },
+    { name: "Priya Verma", feedback: "Quick approval and low interest rates. Highly recommended!" },
+    { name: "Amit Kapoor", feedback: "Best loan experience ever! Customer support was very helpful." },
+    { name: "Neha Singh", feedback: "Fast processing and easy documentation. Got my loan in minutes!" },
+    { name: "Vikram Patil", feedback: "User-friendly platform with excellent service!" },
+    { name: "Sanya Mehta", feedback: "Very convenient loan application process. No hidden charges!" },
+    { name: "Rohan Das", feedback: "Efficient and trustworthy. The best loan provider in India." },
+    { name: "Kavita Joshi", feedback: "Smooth process and transparent policies. Highly satisfied!" },
+    { name: "Raj Malhotra", feedback: "Great experience! The loan was approved instantly." },
+    { name: "Meena Iyer", feedback: "Easy repayment options and great customer support." }
+  ];
+  const [startIndex, setStartIndex] = useState(0);
+  const itemsPerPage = 3;
+
+  const handleNext = () => {
+    if (startIndex + itemsPerPage < feedbackData.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };  
 
   return (
     <div style={containerStyle}>
@@ -399,6 +427,29 @@ const InstantPersonal = () => {
           </button>
         </div>
       </div>
+
+      <div className="feedback-container">
+      <h2>Customers Feedback</h2>
+      <div className="feedback-wrapper">
+        <button className="arrow-btn left" onClick={handlePrev} disabled={startIndex === 0}>
+          <FaArrowLeft />
+        </button>
+        
+        <div className="feedback-boxes">
+          {feedbackData.slice(startIndex, startIndex + itemsPerPage).map((feedback, index) => (
+            <div key={index} className="feedback-box">
+              <FaQuoteLeft className="quote-icon" />
+              <p className="feedback-text">"{feedback.feedback}"</p>
+              <h4 className="customer-name">- {feedback.name}</h4>
+            </div>
+          ))}
+        </div>
+
+        <button className="arrow-btn right" onClick={handleNext} disabled={startIndex + itemsPerPage >= feedbackData.length}>
+          <FaArrowRight />
+        </button>
+      </div>
+    </div>
 
       {/* Fulfil Your Business Needs Section */}
       <div style={appStorePlayStoreContainerStyle}>

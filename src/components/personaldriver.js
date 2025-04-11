@@ -1,20 +1,54 @@
 // In PersonalLoanForDrivers.js
 import React from 'react';
 import './personaldriver.css';  // Import the external CSS file
+import appStoreImg from '../loan_images/appstore.jpg'; // Update with the correct path
+import googlePlayImg from '../loan_images/googleplay.jpg'; // Update with the correct path
+import { FaArrowLeft, FaArrowRight, FaQuoteLeft } from "react-icons/fa";
+import { useState } from 'react';
 
-import loanImage from '../loan_images/taxi.jpg';  // Update with the actual path to your image
-import { FaDownload, FaMoneyBillWave, FaHandshake,FaClipboardList,FaEnvelope,FaUser,FaBirthdayCake,FaTransgender,FaBuilding,FaHome,FaGraduationCap,FaHeart,FaUserFriends,FaCreditCard,FaLink, FaSignInAlt,FaCalendarAlt,FaUserTie,FaBriefcase,FaMobileAlt, FaClock, FaPercentage, FaCheckCircle, FaIdCard, FaMoneyBillAlt, FaAddressCard, FaCamera, FaWallet, FaFileInvoice } from "react-icons/fa"; // Import icons
+
+import loanImage from '../loan_images/mainlogo2.jpg';  // Update with the actual path to your image
+import { FaDownload, FaMoneyBillWave, FaHandshake,FaClipboardList,FaEnvelope,FaUser,FaBirthdayCake,FaTransgender,FaBuilding,FaHome,FaGraduationCap,FaHeart,FaUserFriends,FaCreditCard,FaLink, FaCalendarAlt,FaUserTie,FaBriefcase,FaMobileAlt, FaClock, FaPercentage, FaCheckCircle, FaIdCard, FaMoneyBillAlt, FaAddressCard, FaCamera, FaWallet, FaFileInvoice } from "react-icons/fa"; // Import icons
  // Importing icons from react-icons
 
 const PersonalLoanForDrivers = () => {
+  const [imageUrl,setImageUrl] = useState('');
+
+  const feedbackData = [
+    { name: "Rahul Sharma", feedback: "Amazing loan service! The process was seamless and hassle-free." },
+    { name: "Priya Verma", feedback: "Quick approval and low interest rates. Highly recommended!" },
+    { name: "Amit Kapoor", feedback: "Best loan experience ever! Customer support was very helpful." },
+    { name: "Neha Singh", feedback: "Fast processing and easy documentation. Got my loan in minutes!" },
+    { name: "Vikram Patil", feedback: "User-friendly platform with excellent service!" },
+    { name: "Sanya Mehta", feedback: "Very convenient loan application process. No hidden charges!" },
+    { name: "Rohan Das", feedback: "Efficient and trustworthy. The best loan provider in India." },
+    { name: "Kavita Joshi", feedback: "Smooth process and transparent policies. Highly satisfied!" },
+    { name: "Raj Malhotra", feedback: "Great experience! The loan was approved instantly." },
+    { name: "Meena Iyer", feedback: "Easy repayment options and great customer support." }
+  ];
+
+  const [startIndex, setStartIndex] = useState(0);
+  const itemsPerPage = 3;
+
+  const handleNext = () => {
+    if (startIndex + itemsPerPage < feedbackData.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
   return (
     <div className="personal-driver-page">
       
       {/* Main Content Container (Text and Image) */}
-      <div className="container">
+      <div className="containerDriver">
         <div className="text-container">
           <h2 className="heading">Personal Loan for Drivers</h2>
-          <p className="text">
+          <p className="Subtext">
             JustTap empowers salaried professionals like you to take control of their finances.
             With convenient online personal loans, you can access up to ₹5 Lakhs instantly, even with a minimum monthly salary of ₹10,000. 
             Whether it's managing your regular expenses or fulfilling your aspirations, JustTap's hassle-free loan for salaried individuals is designed to suit your needs. 
@@ -29,39 +63,8 @@ const PersonalLoanForDrivers = () => {
           <img src={loanImage} alt="Personal Loan" className="image" />
         </div>
       </div>
+      
 
-      {/* 4-Part Stats Container */}
-      <div className="stats-container">
-        <div className="stats-item">
-          
-          <div>
-            <h4 className="stats-heading">App Downloads</h4>
-            <p className="counter">1,250,000</p>
-          </div>
-        </div>
-        <div className="gold-line"></div> {/* Line between items */}
-        <div className="stats-item">
-          
-          <div>
-            <h4 className="stats-heading">Total Credit Given</h4>
-            <p className="counter">₹50 Crore</p>
-          </div>
-        </div>
-        <div className="gold-line"></div> {/* Line between items */}
-        <div className="stats-item">
-          
-          <div>
-            <h4 className="stats-heading">Get Instant Loan up to ₹5 Lakhs</h4>
-          </div>
-        </div>
-        <div className="gold-line"></div> {/* Line between items */}
-        <div className="stats-item">
-          <a href="/login" className="login-button">
-            <FaSignInAlt className="icon" />
-            Login
-          </a>
-        </div>
-      </div>
 
 
       {/* Features and Benefits Section */}
@@ -163,6 +166,7 @@ const PersonalLoanForDrivers = () => {
     <div className="application-container">
       {/* Application Requirements Part 1 */}
       <div className="application-part">
+        
         <h2><FaClipboardList /> Application Requirements</h2>
         <ul>
           <li><FaMobileAlt /> Mobile Number</li>
@@ -176,6 +180,7 @@ const PersonalLoanForDrivers = () => {
           <li><FaBuilding /> Company Name</li>
           <li><FaHome /> Permanent Address</li>
         </ul>
+        
       </div>
 
       {/* Application Requirements Part 2 */}
@@ -196,6 +201,96 @@ const PersonalLoanForDrivers = () => {
         </ul>
       </div>
     </div>
+    
+
+    {/* Achieve More Section */}
+    <div className="applyContainer" style={{width:'100%',backgroundColor:'black',justifyContent:'center',alignItems:'center'}}>
+        <div className="appText" style={{color:'white',padding:10}}>
+          Achieve more, worry less. Start your loan journey today with JustTap
+        </div>
+        <div className="logosContainer">
+          <button style={{width:'25%'}}
+          
+            className="applybuttonStyle"
+            onClick={() => window.location.href = '/loanapppage'}
+            onMouseOver={(e) => (e.target.style.backgroundColor = '#4CAF50')} // Hover color
+            onMouseOut={(e) => (e.target.style.backgroundColor = '#008CBA')} // Default button color
+          >
+            Apply Now
+            
+          </button>
+        </div>
+      </div>
+
+      {/* how to apply */}
+<div className="how-to-apply-container">
+  <h2>How to Apply for JustTap Drivers Loan?</h2>
+  <div className="how-to-apply-content">
+    {/* Left side - Mobile screen display */}
+    <div  className="mobile-screen">
+     
+
+      {imageUrl.length !== 0 && <img src = {imageUrl} alt='bhaskar'/>}
+      
+    </div>
+ 
+
+    {/* Right side - Text steps */}
+    <div className="steps-list">
+      <ol>
+        <li onClick={() => 
+         
+      setImageUrl('https://tse4.mm.bing.net/th?id=OIP.-o_8VnhFL2q8V948fIqnOwHaHa&pid=Api&P=0&h=180')}>Sign up using your mobile number</li>
+       <li onClick={() =>  setImageUrl('https://tse4.mm.bing.net/th?id=OIP.A3DvEhLKy0Y1dCeCzSs2VAHaHa&pid=Api&P=0&h=180')}>Enter basic information and check eligibility</li>
+        <li onClick={() => setImageUrl('https://tse3.mm.bing.net/th?id=OIP.srZRLYUCD2HQK35y_LC4wgHaEK&pid=Api&P=0&h=180')}>Verify your profile by uploading KYC documents</li>
+        <li onClick={() => setImageUrl('https://tse4.mm.bing.net/th?id=OIP.SQxr-c3WOiVu5ZevVRgPWwHaEK&pid=Api&P=0&h=180')}>Verify your business by uploading KYB (Know Your Business) documents</li>
+        <li onClick={() => setImageUrl('https://tse4.mm.bing.net/th?id=OIP.EKI6EXvnoBsg7IuFxULluwHaIZ&pid=Api&P=0&h=180')}>Provide bank account details</li>
+        <li onClick={() => setImageUrl('https://tse2.mm.bing.net/th?id=OIP.JQANv7d6dX7tPj83LnN7OAHaEo&pid=Api&P=0&h=180')}>Choose a loan amount and tenure</li>
+        <li onClick={() => setImageUrl('https://tse1.mm.bing.net/th?id=OIP.9LqRK35ZZDqUpqIza_TupwHaEm&pid=Api&P=0&h=180')}>Receive the funds directly in your bank account</li>
+      </ol>
+    </div>
+  </div>
+  
+</div>
+<div className="feedback-container">
+      <h2>Customers Feedback</h2>
+      <div className="feedback-wrapper">
+        <button className="arrow-btn left" onClick={handlePrev} disabled={startIndex === 0}>
+          <FaArrowLeft />
+        </button>
+        
+        <div className="feedback-boxes">
+          {feedbackData.slice(startIndex, startIndex + itemsPerPage).map((feedback, index) => (
+            <div key={index} className="feedback-box">
+              <FaQuoteLeft className="quote-icon" />
+              <p className="feedback-text">"{feedback.feedback}"</p>
+              <h4 className="customer-name">- {feedback.name}</h4>
+            </div>
+          ))}
+        </div>
+
+        <button className="arrow-btn right" onClick={handleNext} disabled={startIndex + itemsPerPage >= feedbackData.length}>
+          <FaArrowRight />
+        </button>
+      </div>
+    </div>
+<div className="app-store-play-store-container">
+      <div className="app-text">
+        Unlock Your Financial Freedom Today - Get Your Loan Disbursed in Just 10 Minutes!
+      </div>
+      <div className="logos-container">
+        <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+          <img src={appStoreImg} alt="App Store" className="store-logo" />
+        </a>
+        <a href="https://play.google.com" target="_blank" rel="noopener noreferrer">
+          <img src={googlePlayImg} alt="Google Play" className="store-logo" />
+        </a>
+      </div>
+    </div>
+
+
+
+
     </div>
     
 

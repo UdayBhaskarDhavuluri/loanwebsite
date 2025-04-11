@@ -3,6 +3,9 @@ import googlePlayImg from '../loan_images/playstore.jpg';  // Assuming you have 
 import appStoreImg from '../loan_images/appstore.jpg'; // Assuming you have the image in the assets folder
 import newImage from '../loan_images/liked1.jpg'; // Your new image
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { FaArrowLeft, FaArrowRight, FaQuoteLeft } from "react-icons/fa";
+import './home.css';
+
 
 
 const Home = () => {
@@ -19,12 +22,56 @@ const Home = () => {
     const happyUserInterval = setInterval(() => setHappyUsers(prev => prev + 5), 1000);
     const loanDisbursedInterval = setInterval(() => setLoanDisbursed(prev => prev + 2), 1000);
 
+    
     return () => {
       clearInterval(downloadInterval);
       clearInterval(happyUserInterval);
       clearInterval(loanDisbursedInterval);
     };
   }, []);
+
+  const feedbackData = [
+    { name: "Rahul Sharma", feedback: "Amazing loan service! The process was seamless and hassle-free." },
+    { name: "Priya Verma", feedback: "Quick approval and low interest rates. Highly recommended!" },
+    { name: "Amit Kapoor", feedback: "Best loan experience ever! Customer support was very helpful." },
+    { name: "Neha Singh", feedback: "Fast processing and easy documentation. Got my loan in minutes!" },
+    { name: "Vikram Patil", feedback: "User-friendly platform with excellent service!" },
+    { name: "Sanya Mehta", feedback: "Very convenient loan application process. No hidden charges!" },
+    { name: "Rohan Das", feedback: "Efficient and trustworthy. The best loan provider in India." },
+    { name: "Kavita Joshi", feedback: "Smooth process and transparent policies. Highly satisfied!" },
+    { name: "Raj Malhotra", feedback: "Great experience! The loan was approved instantly." },
+    { name: "Meena Iyer", feedback: "Easy repayment options and great customer support." }
+  ];
+  const [startIndex, setStartIndex] = useState(0);
+  const itemsPerPage = 3;
+
+  const handleNext = () => {
+    if (startIndex + itemsPerPage < feedbackData.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };  
+  const newsItems = [
+    { channel: "CNN", text: "JustTap offers instant loans with low interest rates!" },
+    { channel: "BBC", text: "Get fast approvals with JustTap Loan App!" },
+    { channel: "Forbes", text: "JustTap revolutionizes digital lending." },
+    { channel: "NY Times", text: "Apply for hassle-free loans on JustTap." },
+    { channel: "The Guardian", text: "JustTap - Loans in minutes, no paperwork." },
+    { channel: "Bloomberg", text: "JustTap sees massive user growth." },
+    { channel: "CNBC", text: "New AI-driven loan approvals with JustTap." },
+    { channel: "Al Jazeera", text: "JustTap simplifies the lending process." },
+    { channel: "Reuters", text: "JustTap introduces flexible loan options." },
+    { channel: "Fox News", text: "Users praise JustTap for quick disbursals." }
+  ];
+
+  
+  
+
 
   return (
     <div className="App">
@@ -217,6 +264,30 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
+      
+      <div className="feedback-container">
+      <h2>Customers Feedback</h2>
+      <div className="feedback-wrapper">
+        <button className="arrow-btn left" onClick={handlePrev} disabled={startIndex === 0}>
+          <FaArrowLeft />
+        </button>
+        
+        <div className="feedback-boxes">
+          {feedbackData.slice(startIndex, startIndex + itemsPerPage).map((feedback, index) => (
+            <div key={index} className="feedback-box">
+              <FaQuoteLeft className="quote-icon" />
+              <p className="feedback-text">"{feedback.feedback}"</p>
+              <h4 className="customer-name">- {feedback.name}</h4>
+            </div>
+          ))}
+        </div>
+
+        <button className="arrow-btn right" onClick={handleNext} disabled={startIndex + itemsPerPage >= feedbackData.length}>
+          <FaArrowRight />
+        </button>
+      </div>
+    </div>
 
       {/* New container for JustTap Drivers */}
       <div className="justtap-drivers-container" style={{ padding: '40px', textAlign: 'center', backgroundColor: '#e0f7fa' }}>
@@ -225,6 +296,20 @@ const Home = () => {
           Across thousands of drivers, JustTap is helping you reach your dreams. Join our community and achieve success together.
         </p>
       </div>
+
+      <div className="news-container">
+      <h2>Latest News on JustTap Loan App</h2>
+      <div className="news-scroller">
+        <div className="news-track">
+          {newsItems.concat(newsItems).map((item, index) => (
+            <div key={index} className="news-box">
+              <strong>{item.channel}:</strong> {item.text}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+      
     </div>
   );
 };

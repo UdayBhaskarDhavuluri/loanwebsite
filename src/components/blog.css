@@ -1,0 +1,335 @@
+/* Main Container */
+.terms-container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  .terms-container:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header Section */
+  .terms-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .terms-header h2 {
+    color: #0f4a97;
+    font-size: 24px;
+  }
+  
+  .terms-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Terms Content */
+  .terms-content {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  /* Individual Term Box */
+  .term-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .term-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .term-box i {
+    font-size: 24px;
+    color: #0f4a97;
+    margin-right: 10px;
+  }
+  
+  .term-box h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .term-box p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .terms-content {
+      flex-direction: column;
+    }
+  
+    .term-box {
+      width: 100%;
+    }
+  }
+  /* Main Container */
+.eligibility-containers {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.eligibility-containers:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.eligibility-header {
+  color: #0f4a97;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Button */
+.eligibility-button {
+  margin-top: 15px;
+  background: #0f4a97;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  width: 25%;
+}
+
+.eligibility-button:hover {
+  background: #0c3b7a;
+}
+
+/* Eligibility Content */
+.eligibility-content {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Subheaders */
+.eligibility-subheader {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Paragraph Styling */
+.eligibility-text {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* List Styling */
+.eligibility-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin-top: 10px;
+  color: #444;
+}
+
+.eligibility-list li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .eligibility-containers {
+      width: 90%;
+  }
+
+  .eligibility-list {
+      padding-left: 10px;
+  }
+}
+
+/* Main Container */
+.loan-info-container {
+  width: 60%;
+  margin: 20px auto;
+  padding:20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.loan-info-container:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.loan-info-header {
+  color: #0f4a97;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Content Box */
+.loan-info-content {
+  margin-top: 20px;
+}
+
+.loan-info-box {
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Text Styling */
+.loan-info-text h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.loan-info-text p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Button */
+.loan-info-button-container {
+  margin-top: 15px;
+}
+
+.loan-info-button {
+  background: #0f4a97;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  width: 25%;
+}
+
+.loan-info-button:hover {
+  background: #0c3b7a;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .loan-info-container {
+    width: 90%;
+  }
+}
+.quick-loans-container {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.quick-loans-container:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.quick-loans-header h2 {
+  color: #0f4a97;
+  font-size: 24px;
+}
+
+.quick-loans-content {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.quick-loans-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.quick-loans-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 15px;
+  width: 45%;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.quick-loans-box:hover {
+  transform: scale(1.05);
+}
+
+.quick-loans-box i {
+  font-size: 24px;
+  color: #0f4a97;
+  margin-right: 10px;
+}
+
+.quick-loans-box h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.quick-loans-box p {
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .quick-loans-content {
+      flex-direction: column;
+  }
+
+  .quick-loans-box {
+      width: 100%;
+  }
+}

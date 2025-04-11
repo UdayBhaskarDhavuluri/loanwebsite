@@ -1,4 +1,6 @@
-import React from 'react';
+import React,{ useState } from 'react';
+import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+
 import './contactus.css'; // Importing the CSS file
 
 const Contact = () => {
@@ -7,37 +9,76 @@ const Contact = () => {
     const googleMapsUrl = `https://www.google.com/maps?q=${address}`;
     window.open(googleMapsUrl, '_blank'); // Opens the address in Google Maps
   };
+  
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    alert("Thank you! Your message has been sent.");
+    setFormData({ fullName: "", email: "", message: "" }); // Reset form fields
+  };
+
 
   return (
+    
     <div className="contact-container">
-      <h2 style={{color:'#000'}}>Contact Us</h2>
-
-      <div className="contact-info">
+      
+      <div className="contact-section">
+      {/* Left Side - Contact Information */}
+      <div className="contact-details">
+        <h2>Contact Us</h2>
         
-        <p><strong>Email:</strong> bhaskardavuluri8@gmail.com</p>
-        <p><strong>Phone:</strong> +91 834 086 3204</p>
-        <p><strong>Phone:</strong> +91 912 106 7423</p>
-      </div>
+        <div className="contact-item">
+          <FaEnvelope className="icon" />
+          <p>Email: <a href="mailto:bhaskardavuluri8@gmail.com">bhaskardavuluri8@gmail.com</a></p>
+        </div>
 
-      <div className="address">
-        <h3>Our Address</h3>
-        <p>1234 Street Name, City, Country</p>
-      </div>
+        <div className="contact-item">
+          <FaPhone className="icon" />
+          <p>Phone: +91 834 086 3204</p>
+        </div>
 
-      <div className="social-media">
+        <div className="contact-item">
+          <FaPhone className="icon" />
+          <p>Phone: +91 912 106 7423</p>
+        </div>
+
+        <div className="contact-item">
+          <FaMapMarkerAlt className="icon" />
+          <p>Our Address: 1234 Street Name, City, Country</p>
+        </div>
+
         <h3>Follow Us</h3>
         <div className="social-icons">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="icon facebook">Facebook</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon twitter">Twitter</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon instagram">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook className="social-icon facebook" /></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter className="social-icon twitter" /></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram className="social-icon instagram" /></a>
         </div>
-      </div>
 
-      <div className="gmail">
         <h3>Send us an email</h3>
         <p>You can also reach out to us at <a href="mailto:bhaskardavuluri8@gmail.com">bhaskardavuluri8@gmail.com</a></p>
-        <p>Contact Us, Our customer service agents are available from 9AM - 7PM to assist you with any problem.</p>
+
+        <p className="customer-service">
+          Our customer service agents are available from <strong>9 AM - 7 PM</strong> to assist you with any problem.
+        </p>
       </div>
+
+      {/* Right Side - Empty Space for an Image */}
+      <div  className="contact-image">
+      <img src="https://th.bing.com/th/id/OIP.jEzPKIUcRD2LQGrNF-WxHgHaHa?w=195&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Contact Us Office" />
+
+        {/* Add an image here */}
+      </div>
+    </div>
 
       {/* Office Location Section */}
       <div className="office-location">
@@ -64,6 +105,50 @@ const Contact = () => {
           <button className="locate-us-btn" onClick={handleLocateUs}>Locate Us</button>
         </div>
       </div>
+      <div className="contact-form-container">
+      <h2>Contact Us</h2>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div className="input-group">
+          <label htmlFor="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            required
+            placeholder="Enter your full name"
+          />
+        </div>
+
+        <div className="input-group">
+          <label htmlFor="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            placeholder="Enter a valid email address"
+          />
+        </div>
+
+        <div className="input-group">
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            placeholder="Enter your message"
+          ></textarea>
+        </div>
+
+        <button type="submit" className="submit-btn">Send Message</button>
+      </form>
+    </div>
     </div>
   );
 };

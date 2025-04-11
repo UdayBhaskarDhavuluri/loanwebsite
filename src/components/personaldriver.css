@@ -1,4 +1,4 @@
-.personal-driver-page  .container {
+.personal-driver-page  .containerDriver {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +10,7 @@
 .personal-driver-page .text-container {
   flex: 1;
   max-width: 50%;
+ 
   padding-right: 20px;
 }
 
@@ -18,12 +19,13 @@
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
+  color: #000;
 }
 
-.personal-driver-page  .text {
+.personal-driver-page  .Subtext {
   font-size: 16px;
   line-height: 1.6;
-  color: #333;
+  color: #000;
 }
 
 .personal-driver-page .image-container {
@@ -72,7 +74,7 @@
 
 .personal-driver-page .feature-icon {
   font-size: 30px;
-  color: #007BFF;
+  color: black;
 }
 
 .personal-driver-page .feature-heading {
@@ -109,7 +111,7 @@
 
 .personal-driver-page .stats-item .icon {
   font-size: 30px;
-  color: #007BFF;
+  color: black;
   margin-top: 40;
 }
 
@@ -236,9 +238,13 @@
   margin: 20px;
 }
 
-.personal-driver-page .application-part {
+.personal-driver-page .application-part  {
   width: 45%;
+  color: #000;
 }
+
+  
+
 
 .personal-driver-page h2 {
   font-size: 1.5rem;
@@ -272,3 +278,196 @@
   padding: 5px;
   border-radius: 5px;
 }
+.how-to-apply-container {
+  padding: 40px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.how-to-apply-container h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.how-to-apply-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.mobile-screen {
+  width: 40%;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.mobile-screen::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 95%;
+  background: url('https://ik.imagekit.io/krazybee/kreditbee_in/banners/New_Web/Inner_Pages/Generic/images_PhoneMockup-iOS.png') no-repeat center center;
+  background-size: contain;
+}
+
+.mobile-screen-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 30px;
+  font-size: 18px;
+  color: #555;
+  text-align: left;
+}
+
+.mobile-step {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.steps-list {
+  width: 50%;
+}
+
+.steps-list ol {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+.steps-list li {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #fff;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.steps-list li:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.app-store-play-store-container {
+  text-align: center;
+  padding: 20px;
+  background-color: skyblue;
+}
+
+.app-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.store-logo {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.store-logo:hover {
+  transform: scale(1.1);
+}
+
+.feedback-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.feedback-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.feedback-boxes {
+  display: flex;
+  gap: 15px;
+}
+
+.feedback-box {
+  width: 300px;
+  height: 200px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feedback-box:hover {
+  transform: scale(1.05);
+}
+
+.quote-icon {
+  font-size: 30px;
+  color: #ff6b6b;
+}
+
+.feedback-text {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.customer-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.arrow-btn {
+  background-color: #ff6b6b;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.arrow-btn:hover {
+  background-color: #ff4c4c;
+}
+
+.arrow-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.left {
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}
+

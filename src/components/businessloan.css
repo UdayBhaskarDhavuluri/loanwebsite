@@ -1,5 +1,5 @@
 /* Container Styles */
-.container {
+.Businesscontainer {
   padding: 40px;
   font-family: Arial, sans-serif;
   max-width: 1200px;
@@ -13,13 +13,14 @@
   justify-content: space-between;
   margin-bottom: 40px;
   width: 100%;
+  gap: 10px;
 }
 
 /* First Part: Business Loan Info */
 .loan-info {
   flex: 1;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #000;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -39,7 +40,7 @@
 .apply-container {
   margin-top: 40px;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #000;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -49,10 +50,10 @@
 .features-container {
   margin-top: 60px;
   padding: 40px;
-  background-color: #fff;
+  background-color: skyblue;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 95%;
 }
 
 /* Grid for Features and Benefits Boxes */
@@ -76,19 +77,31 @@
   transform: translateY(-10px);
 }
 
+.eligibility-documetsContainer{
+  display:flex;
+  width: 100%;
+  gap: 40px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 /* Eligibility Criteria and Documents Required Containers */
-.eligibility-container,
-.documents-container {
+
+.Businesseligibility-container{
   padding: 20px;
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column; /* Stack the content vertically */
-  gap: 20px; /* Add gap between heading and content */
+  margin: 20px 20px;
+  width: 100%;
+  
+}
+
+.Businessdocuments-container {
+  padding: 20px;
+  margin: 20px 20px;
   width: 100%;
 }
 
-.eligibility-container h2,
-.documents-container h2,
+.Businesseligibility-container h2,
+.Businessdocuments-container h2,
 .application-requirements-container h2 {
   font-size: 24px;
   margin-bottom: 15px;
@@ -97,23 +110,23 @@
 }
 
 /* Content Styling */
-.eligibility-container .eligibility-content,
-.documents-container .documents-content {
+.Businesseligibility-container .Businesseligibility-content,
+.Businessdocuments-container .Businessdocuments-content {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
 /* Align Icon and Text in Eligibility and Documents Required sections */
-.eligibility-container .eligibility-item,
-.documents-container .documents-item {
+.Businesseligibility-container .Businesseligibility-item,
+.Businessdocuments-container .Businessdocuments-item {
   display: flex;
   align-items: center; /* Align icon and text vertically */
   gap: 10px; /* Space between icon and text */
 }
 
-.eligibility-container .eligibility-item i,
-.documents-container .documents-item i {
+.Businesseligibility-container .Businesseligibility-item i,
+.Businessdocuments-container .Businessdocuments-item i {
   font-size: 20px; /* Adjust the size of the icons */
   color: #4CAF50;
 }
@@ -149,6 +162,11 @@
   margin: 0;
   width: 48%; /* Adjust width to fit */
 }
+.Businesseligibility-box{
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
 
 .application-requirements-list li {
   font-size: 16px;
@@ -179,11 +197,28 @@
   margin-left: 10px;
   font-weight: 500;
 }
+.applynowContainer{
+  background-color: black;
+  width: 100%;
+  
+}
+.applybuttonStyle{
+  width: 300;
+  padding: 20px;
+}
+.icon{
+  margin-right: 24px !important;
+}
+.Businessdocuments-box{
+  display: flex;
 
+    align-items: center;
+    justify-content: flex-start;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
-  .eligibility-container .eligibility-content,
-  .documents-container .documents-content {
+  .Businesseligibility-container .Businesseligibility-content,
+  .Businessdocuments-container .Businessdocuments-content {
     gap: 10px; /* Reduce gap on small screens */
   }
 
@@ -192,4 +227,88 @@
     width: 100%;
   }
 }
+.feedback-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.feedback-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.feedback-boxes {
+  display: flex;
+  gap: 15px;
+}
+
+.feedback-box {
+  width: 300px;
+  height: 200px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feedback-box:hover {
+  transform: scale(1.05);
+}
+
+.quote-icon {
+  font-size: 30px;
+  color: #ff6b6b;
+}
+
+.feedback-text {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.customer-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.arrow-btn {
+  background-color: #ff6b6b;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.arrow-btn:hover {
+  background-color: #ff4c4c;
+}
+
+.arrow-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.left {
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}
+
 

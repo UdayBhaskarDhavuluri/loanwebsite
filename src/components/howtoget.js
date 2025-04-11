@@ -67,6 +67,7 @@ const LoanApplicationProcess = () => {
           fontSize: '18px',
           cursor: 'pointer',
           fontWeight: 'bold',
+          width:'200px',
         }}
       >
         Get Loan Today
